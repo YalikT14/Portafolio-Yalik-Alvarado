@@ -1,0 +1,19 @@
+extends layouts/main
+
+block content
+  section.container.text-center.py-5
+    .error-page
+      h1.display-1.text-danger 404
+      h2.mb-4= message
+      p.lead La página que buscas no existe o ha sido movida.
+      
+      a.btn.btn-primary.mt-3(href='/') 
+        i.bi.bi-house-fill.me-2
+        | Volver al inicio
+      
+      .mt-5
+        img.img-fluid(
+          src='/images/dibujo.png' 
+          alt='Error 404'
+          style='max-width: 300px; opacity: 0.5;'
+        )

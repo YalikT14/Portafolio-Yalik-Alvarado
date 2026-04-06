@@ -1,0 +1,88 @@
+section#Contactos.contact.bordes
+  .container
+    hr
+    h2 Contacto
+    hr
+    p ¿Te gustaría ponerte en contacto?
+    
+    form(action='/contact' method='POST')
+      fieldset.mb-3
+        legend Info personal
+        
+        .mb-3
+          label.form-label(for='nombre') Nombre:
+          input#nombre.form-control(
+            type='text'
+            name='nombre'
+            placeholder='Ingresa tu nombre'
+            required
+          )
+        
+        .mb-3
+          label.form-label(for='correo') E-mail:
+          input#correo.form-control(
+            type='email'
+            name='correo'
+            placeholder='hola@gmail.com'
+            required
+          )
+        
+        .mb-3
+          label.form-label(for='telf') Teléfono:
+          input#telf.form-control(
+            type='tel'
+            name='telf'
+            placeholder='09999999'
+          )
+      
+      fieldset.mb-3
+        legend Motivo de contacto
+        
+        .mb-3
+          label.form-label(for='motivo') Escoge una opción:
+          select#motivo.form-select(name='motivo')
+            option(value='consulta') Consulta
+            option(value='proyecto') Proyecto
+            option(value='oportunidad') Oportunidad de Trabajo
+      
+      fieldset.mb-3
+        legend Escríbeme algo
+        
+        .mb-3
+          label.form-label(for='mensaje') Mensaje:
+          textarea#mensaje.form-control(
+            name='mensaje'
+            rows='8'
+            placeholder='Escribe un mensaje'
+            required
+          )
+      
+      .d-flex.gap-2
+        button.btn.btn-primary(type='submit') Enviar información
+        button.btn.btn-secondary(type='reset') Borrar
+    
+    hr
+    h2 Redes Sociales
+    hr
+    
+    .d-flex.gap-3.justify-content-center
+      a(
+        href='https://www.instagram.com/yaliksitodab/'
+        target='_blank'
+        rel='noopener'
+      )
+        img(src='/images/instagram.png' width='50' alt='Instagram')
+      
+      a(
+        href='https://www.youtube.com/@YalikT14'
+        target='_blank'
+        rel='noopener'
+      )
+        img(src='/images/youtube.png' width='50' alt='YouTube')
+      
+      a(
+        href='https://steamcommunity.com/id/eseecuagodiano/'
+        target='_blank'
+        rel='noopener'
+      )
+        img(src='/images/logotipo-de-steam.png' width='50' alt='Steam')
