@@ -1,18 +1,31 @@
-header.header.sticky
-  nav.navbar.bordes
-    a(href='#Home' style='text-decoration:none')
-      .navbar-logo
-        img.bordes(src='/images/isotipo color.png' width='60' alt='')
-        img(src='/images/Yalik_Monocromatico 2.png' height='70' alt='')
+header.header
+  nav.navbar.container
+    a.navbar-logo(href='/' aria-label='Ir al inicio')
+      img.logo-icon(src='/images/isotipo color.png' width='60' alt='')
+      img.logo-text(src='/images/Yalik_Monocromatico 2.png' height='70' alt='Yalik Tapuy')
     
+    //- Menú desktop
+    ul.navbar-menu
+      li
+        a.nav-link(href='/portafolio') Portafolio
+      li
+        a.nav-link(href='/sobre-mi') Sobre Mí
+      li
+        a.nav-link.contact-link(href='mailto:globox204@outlook.es')
+          span.icon 📧
+          span globox204@outlook.es
+    
+    //- Toggle móvil
     #toggle.button_container
       span.top
       span.middle
       span.bottom
     
+    //- Overlay menú móvil
     #overlay.overlay
       nav.overlay-menu
         ul
-          li: a(href='#Portafolio') Portafolio
-          li: a(href='#About') Sobre mí
-          li: a(href='#Contactos') Contacto
+          li: a(href='/') Inicio
+          li: a(href='/portafolio') Portafolio
+          li: a(href='/sobre-mi') Sobre Mí
+          li: a(href='mailto:globox204@outlook.es') Contacto

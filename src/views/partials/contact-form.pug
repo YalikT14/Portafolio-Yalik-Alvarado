@@ -1,88 +1,52 @@
-section#Contactos.contact.bordes
+section#contacto.contact-section
   .container
-    hr
-    h2 Contacto
-    hr
-    p ¿Te gustaría ponerte en contacto?
+    h2.text-gradient ¿Hablamos?
+    p.lead ¿Tienes un proyecto en mente? ¡Contáctame!
     
-    form(action='/contact' method='POST')
-      fieldset.mb-3
-        legend Info personal
-        
-        .mb-3
-          label.form-label(for='nombre') Nombre:
-          input#nombre.form-control(
+    form.contact-form(action='/contact' method='POST')
+      .form-row
+        .form-group
+          label(for='nombre') Nombre
+          input#nombre.form-input(
             type='text'
             name='nombre'
-            placeholder='Ingresa tu nombre'
+            placeholder='Tu nombre'
             required
           )
         
-        .mb-3
-          label.form-label(for='correo') E-mail:
-          input#correo.form-control(
+        .form-group
+          label(for='correo') Email
+          input#correo.form-input(
             type='email'
             name='correo'
-            placeholder='hola@gmail.com'
-            required
-          )
-        
-        .mb-3
-          label.form-label(for='telf') Teléfono:
-          input#telf.form-control(
-            type='tel'
-            name='telf'
-            placeholder='09999999'
-          )
-      
-      fieldset.mb-3
-        legend Motivo de contacto
-        
-        .mb-3
-          label.form-label(for='motivo') Escoge una opción:
-          select#motivo.form-select(name='motivo')
-            option(value='consulta') Consulta
-            option(value='proyecto') Proyecto
-            option(value='oportunidad') Oportunidad de Trabajo
-      
-      fieldset.mb-3
-        legend Escríbeme algo
-        
-        .mb-3
-          label.form-label(for='mensaje') Mensaje:
-          textarea#mensaje.form-control(
-            name='mensaje'
-            rows='8'
-            placeholder='Escribe un mensaje'
+            placeholder='tu@email.com'
             required
           )
       
-      .d-flex.gap-2
-        button.btn.btn-primary(type='submit') Enviar información
-        button.btn.btn-secondary(type='reset') Borrar
-    
-    hr
-    h2 Redes Sociales
-    hr
-    
-    .d-flex.gap-3.justify-content-center
-      a(
-        href='https://www.instagram.com/yaliksitodab/'
-        target='_blank'
-        rel='noopener'
-      )
-        img(src='/images/instagram.png' width='50' alt='Instagram')
+      .form-group
+        label(for='motivo') Motivo
+        select#motivo.form-input(name='motivo')
+          option(value='consulta') Consulta
+          option(value='proyecto') Proyecto
+          option(value='oportunidad') Oportunidad de Trabajo
       
-      a(
-        href='https://www.youtube.com/@YalikT14'
-        target='_blank'
-        rel='noopener'
-      )
-        img(src='/images/youtube.png' width='50' alt='YouTube')
+      .form-group
+        label(for='mensaje') Mensaje
+        textarea#mensaje.form-input(
+          name='mensaje'
+          rows='6'
+          placeholder='Cuéntame sobre tu proyecto...'
+          required
+        )
       
-      a(
-        href='https://steamcommunity.com/id/eseecuagodiano/'
-        target='_blank'
-        rel='noopener'
-      )
-        img(src='/images/logotipo-de-steam.png' width='50' alt='Steam')
+      button.submit-btn(type='submit') Enviar Mensaje 📧
+    
+    .social-links
+      h3 Encuéntrame en
+      .social-icons
+        a(href='https://www.instagram.com/yaliksitodab/' target='_blank')
+          img(src='/images/instagram.png' alt='Instagram')
+        a(href='https://www.youtube.com/@YalikT14' target='_blank')
+          img(src='/images/youtube.png' alt='YouTube')
+        a(href='https://steamcommunity.com/id/eseecuagodiano/' target='_blank')
+          img(src='/images/logotipo-de-steam.png' alt='Steam')

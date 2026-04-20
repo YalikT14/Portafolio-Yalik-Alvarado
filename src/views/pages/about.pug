@@ -1,0 +1,74 @@
+extends ../layouts/main
+
+block content
+  section.about-page
+    .container
+      .about-header
+        h1.text-gradient Sobre Mí
+        p.lead #{name} - Diseñador en Medios Interactivos
+      
+      .about-content
+        .about-grid
+          .about-card
+            img.about-image(
+              src='/images/yalin.png'
+              alt='Yalik Tapuy'
+            )
+          
+          .about-text
+            h2 ¡Hola! 👋
+            p
+              | Soy #{name}, actualmente estudiante de Diseño en Medios 
+              | Interactivos en la Universidad San Francisco de Quito. 
+              | Soy oriundo de la Amazonía Ecuatoriana, específicamente 
+              | de Archidona, Napo.
+            
+            p
+              | De entre mis hobbies disfruto mucho las salidas al aire libre, 
+              | como montañismo, senderismo o ciclismo. También me encanta 
+              | el teatro y es algo que practico desde hace un tiempo.
+        
+        .skills-section
+          h2 🎯 Habilidades
+          .skills-grid
+            .skill-card
+              h4 Programación
+              ul
+                li Python - Básico
+                li C++ - Intermedio
+                li C# - Intermedio
+                li HTML & CSS - Básico
+            
+            .skill-card
+              h4 Diseño
+              ul
+                li Edición en Photoshop - Intermedio
+                li Adobe Illustrator - Intermedio
+                li Edición de video (VEGAS) - Intermedio
+            
+            .skill-card
+              h4 Otros
+              ul
+                li Game Design
+                li Dirección de Doblaje
+                li Teatro y Actuación
+        
+        .experience-section
+          h2 💼 Experiencia Laboral
+          .timeline
+            .timeline-item
+              h4 Director de Doblaje
+              p.company Pozole Man y Chilatín
+              p.description Supervisión de dirección de voces en proyecto animado
+            
+            .timeline-item
+              h4 Editor de Video
+              p.company Yojo Pool & Chilleando con el donas
+              p.description Edición de contenido para canales de YouTube
+            
+            .timeline-item
+              h4 Cajero y Personal de Carga
+              p.company Bodega San Francisco
+              p.description Atención al cliente y gestión de inventario
+      
+      include ../partials/contact-form

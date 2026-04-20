@@ -1,0 +1,37 @@
+extends ../layouts/main
+
+block content
+  section.portfolio-page
+    .container
+      .portfolio-header
+        h1.text-gradient Mi Portafolio
+        p.lead Selecciona una categoría para explorar mis proyectos
+      
+      //- Filtros de categoría (sin opción "Todos")
+      .portfolio-filters
+        a.filter-btn(
+          href='/portafolio/programacion'
+          class=category === 'programacion' ? 'active' : ''
+        ) 💻 Programación
+        
+        a.filter-btn(
+          href='/portafolio/diseno'
+          class=category === 'diseno' ? 'active' : ''
+        ) 🎨 Diseño
+        
+        a.filter-btn(
+          href='/portafolio/doblaje'
+          class=category === 'doblaje' ? 'active' : ''
+        ) 🎤 Doblaje
+      
+      //- Grid de proyectos (solo se muestra si hay categoría seleccionada)
+      if category
+        .portfolio-grid
+          if category === 'programacion'
+            include ../partials/portfolio/programacion
+          
+          if category === 'diseno'
+            include ../partials/portfolio/diseno
+          
+          if category === 'doblaje'
+            include ../partials/portfolio/doblaje

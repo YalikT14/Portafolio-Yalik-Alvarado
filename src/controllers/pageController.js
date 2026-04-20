@@ -1,8 +1,45 @@
 exports.getHome = (req, res) => {
-  res.render("index", {
+  res.render("pages/home", {
     title: "Portafolio - Yalik Tapuy",
-    name: "Yalik Amilcar Tapuy Alvarado",
+    name: "Yalik Tapuy",
     profession: "Programador, Game Designer y Diseñador Web",
+    currentYear: new Date().getFullYear(),
+  });
+};
+
+exports.getPortfolio = (req, res) => {
+  res.render("pages/portafolio", {
+    title: "Portafolio - Yalik Tapuy",
+    category: null, // Sin categoría = no renderizar nada
+    currentYear: new Date().getFullYear(),
+  });
+};
+
+exports.getPortfolioCategory = (req, res) => {
+  const { category } = req.params;
+  const validCategories = ["programacion", "diseno", "doblaje"];
+
+  if (!validCategories.includes(category)) {
+    return res.redirect("/portafolio");
+  }
+
+  const categoryNames = {
+    programacion: "Programación",
+    diseno: "Diseño",
+    doblaje: "Doblaje",
+  };
+
+  res.render("pages/portafolio", {
+    title: `Portafolio - ${categoryNames[category]}`,
+    category,
+    currentYear: new Date().getFullYear(),
+  });
+};
+
+exports.getAbout = (req, res) => {
+  res.render("pages/about", {
+    title: "Sobre Mí - Yalik Tapuy",
+    name: "Yalik Amilcar Tapuy Alvarado",
     currentYear: new Date().getFullYear(),
   });
 };
@@ -10,7 +47,6 @@ exports.getHome = (req, res) => {
 exports.postContact = (req, res) => {
   const { nombre, correo, telf, motivo, mensaje } = req.body;
 
-  // Aquí puedes procesar el formulario
   console.log("Formulario recibido:", {
     nombre,
     correo,
@@ -19,6 +55,5 @@ exports.postContact = (req, res) => {
     mensaje,
   });
 
-  // Por ahora solo redirigimos
-  res.redirect("/#Contactos");
+  res.redirect("/sobre-mi#contacto");
 };

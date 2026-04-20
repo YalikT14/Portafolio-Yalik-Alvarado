@@ -1,0 +1,105 @@
+.portfolio-category
+  h2.category-title 💻 Programación
+  
+  .project-card
+    .project-header
+      h3 Sinchi Saynata - Salvemos el Chocó Andino
+      p.project-tech C# • Unity • Game Design • Animación
+    
+    .project-body
+      p.project-description
+        | En este juego, encarnas a la máscara Aya Huma para proteger la región andina del Chocó de la minería ilegal y la explotación indiscriminada de recursos.
+        br
+        | Por suerte, tus amigos Cóndor, Jaguar y Serpiente están dispuestos a prestarte sus poderes únicos. ¡Únete a ellos y salva tu hogar!
+        br
+        | Dato curioso: Sinchi Saynata significa "máscara valiente" en kichwa. Este juego está inspirado en el folclore andino ecuatoriano.
+        br
+        | ¡Creado para la Global Game Jam 2026 en Ecuador! Y apareció en un artículo de noticias del diario El Comercio.
+
+      //- Carrusel de imágenes
+      .swiper.project-carousel
+        .swiper-wrapper
+          .swiper-slide
+            img(src='/images/Sinchi Saynata/Cover.png' alt='Cover')
+            .slide-caption Arte de Portada
+          .swiper-slide
+            img(src='/images/Sinchi Saynata/Main.png' alt='Mensaje introductorio')
+            .slide-caption Mensaje introductorio
+          .swiper-slide
+            img(src='/images/Sinchi Saynata/Aya.png' alt='Máscara Aya Huma')
+            .slide-caption Máscara Aya Huma
+          .swiper-slide
+            img(src='/images/Sinchi Saynata/Jaguar.png' alt='Jaguar')
+            .slide-caption Forma de Jaguar
+          .swiper-slide
+            img(src='/images/Sinchi Saynata/Condor.png' alt='Cóndor')
+            .slide-caption Forma de Cóndor
+          .swiper-slide
+            img(src='/images/Sinchi Saynata/Snake.png' alt='Serpiente')
+            .slide-caption Forma de Serpiente
+        
+        .swiper-button-next
+        .swiper-button-prev
+        .swiper-pagination
+      
+      p.project-tech Video Gameplay
+      .video-wrapper
+        .custom-video-player
+          video(controls)
+            source(src='/images/Sinchi Saynata/SinchiCore.mp4' type='video/mp4')
+            | Tu navegador no soporta el elemento de video.
+
+      .project-credits
+        h4 Link de la página del juego en Itch.io:
+        ul 
+          li 
+            a(href='https://tar-baby.itch.io/sinchi-saynata' target='_blank') https://tar-baby.itch.io/sinchi-saynata
+      
+      .project-credits
+        h4 Créditos
+        ul
+          li Violeta Mediavilla @aguanteelpoxi01 - Programación y Diseño de Niveles
+          li Yalik Alvarado @yaliksitodab - Programación, Animación y Diseño de Niveles
+          li Martin Espinosa @elespi_x - Ilustración, Diseño de Personajes y SFX
+          li Camilo Cevallos @skellymuffin - Ilustración y Animación 
+          li Kerly Vallejo @kerlyacinemod - Música
+
+  .project-card
+    .project-header
+      h3 Haunted House
+      p.project-tech C# • Unity • Game Design
+    
+    .project-body
+      p.project-description
+        | Videojuego 3D que mezcla mecánicas de shooter, plataformas y 
+        | sobrevivencia. Desarrollado completamente por mí.
+      
+      //- Carrusel de imágenes
+      .swiper.project-carousel
+        .swiper-wrapper
+          .swiper-slide
+            img(src='/images/Haunted House SC/menu inicio.png' alt='Menú Principal')
+            .slide-caption Menú Principal
+          .swiper-slide
+            img(src='/images/Haunted House SC/sc2.png' alt='Mensaje introductorio')
+            .slide-caption Mensaje introductorio
+          .swiper-slide
+            img(src='/images/Haunted House SC/sc3.png' alt='Nivel 1')
+            .slide-caption Nivel 1 - Entrada
+          .swiper-slide
+            img(src='/images/Haunted House SC/sc4.png' alt='Nivel 2')
+            .slide-caption Nivel 2 - Entrada
+          .swiper-slide
+            img(src='/images/Haunted House SC/sc5.png' alt='Nivel 3')
+            .slide-caption Nivel 3 - Entrada
+        
+        .swiper-button-next
+        .swiper-button-prev
+        .swiper-pagination
+      
+      p.project-tech Video Gameplay
+      .video-wrapper
+        .custom-video-player
+          video(controls)
+            source(src='/images/Juegojugar.mp4' type='video/mp4')
+            | Tu navegador no soporta el elemento de video.

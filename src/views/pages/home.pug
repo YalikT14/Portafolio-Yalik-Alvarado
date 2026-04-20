@@ -1,0 +1,35 @@
+extends ../layouts/main
+
+block content
+  section.hero
+    .hero-content
+      p.hero-greeting Hola, soy
+      h1.hero-title= name
+      h3.hero-subtitle= profession
+      
+      img.hero-image(
+        src='/images/dibujo.png'
+        alt='Yalik Tapuy'
+      )
+      
+      p.hero-description
+        | Entusiasta de la programación y los videojuegos. Entre mis trabajos 
+        | siempre procuro dejar algo que divierta a mis clientes.
+        br
+        strong ¡Espero que tú también te diviertas viendo mis trabajos!
+    
+    .nav-cards
+      a.nav-card(href='/portafolio')
+        .nav-card-icon 💼
+        h3 Portafolio
+        p Explora mis proyectos de programación, diseño y doblaje
+      
+      a.nav-card(href='/sobre-mi')
+        .nav-card-icon 👤
+        h3 Sobre Mí
+        p Conoce más acerca de mi experiencia y habilidades
+      
+      a.nav-card(href='/sobre-mi#contacto')
+        .nav-card-icon 📧
+        h3 Contacto
+        p ¿Tienes un proyecto en mente? ¡Hablemos!
