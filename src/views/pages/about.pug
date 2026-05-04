@@ -5,7 +5,7 @@ block content
     .container
       .about-header
         h1.text-gradient Sobre Mí
-        p.lead #{name} - Diseñador en Medios Interactivos
+        p.lead #{name} - Diseñador en Medios Interactivos y Actor de Voz
       
       .about-content
         .about-grid
@@ -16,59 +16,83 @@ block content
             )
           
           .about-text
-            h2 ¡Hola! 👋
+            h2 ¡Hola!
             p
               | Soy #{name}, actualmente estudiante de Diseño en Medios 
               | Interactivos en la Universidad San Francisco de Quito. 
-              | Soy oriundo de la Amazonía Ecuatoriana, específicamente 
-              | de Archidona, Napo.
-            
+              | Soy oriundo de la Amazonía Ecuatoriana.
+            br
             p
               | De entre mis hobbies disfruto mucho las salidas al aire libre, 
               | como montañismo, senderismo o ciclismo. También me encanta 
-              | el teatro y es algo que practico desde hace un tiempo.
+              | el teatro y la interpretación vocal.
         
         .skills-section
-          h2 🎯 Habilidades
+          h2.spani.bi.bi-bullseye  Habilidades
           .skills-grid
             .skill-card
               h4 Programación
               ul
                 li Python - Básico
+                li NonSql Databases - Básico
+                li MongoDB - Intermedio
+                li Processing - Intermedio
+                li JavaScript - Intermedio
                 li C++ - Intermedio
-                li C# - Intermedio
-                li HTML & CSS - Básico
+                li Arduino - Intermedio
+                li C# & Unity - Avanzado
+                li HTML & CSS - Avanzado
             
             .skill-card
               h4 Diseño
               ul
+                li Ilustración Digital - Intermedio
                 li Edición en Photoshop - Intermedio
                 li Adobe Illustrator - Intermedio
+                li Adobe After Effects - Intermedio
                 li Edición de video (VEGAS) - Intermedio
+                li Edición de video (Premiere) - Avanzado
             
             .skill-card
               h4 Otros
               ul
                 li Game Design
-                li Dirección de Doblaje
-                li Teatro y Actuación
+                li Actuación de Voz y Doblaje
+                li Actuación Teatral
+                li Ingles - Intermedio a Avanzado
+                li Español - Nativo
         
         .experience-section
-          h2 💼 Experiencia Laboral
+          h2.span.i.bi.bi-briefcase-fill  Experiencia Laboral
           .timeline
             .timeline-item
-              h4 Director de Doblaje
-              p.company Pozole Man y Chilatín
-              p.description Supervisión de dirección de voces en proyecto animado
+              h4 Desarrollador Web
+              p.company Caja de Voces (2026)
+              p.description Como parte de mis prácticas profesionales, trabajé en el desarrollo y mantenimiento del sitio web del estudio de doblaje "Caja de Voces", utilizando una estructura de backend con Node.js y Express, y un frontend dinámico con Pug, HTML, CSS y JavaScript. Además, implementé un sistema de gestión de contenido para facilitar la actualización de proyectos, actualizaciones del blog, cursos y noticias relacionadas con el estudio, mejorando la experiencia del usuario y la eficiencia del equipo de contenido.
+
+            .timeline-item
+              h4 Desarrollador Web
+              p.company Victor Ruiz Voices (2026)
+              p.description Como parte de mi clase Prácticas y Portafolio, colaboré con el Actor de Voz y Doblaje Victor Alan Ruiz en el rediseño y desarrollo de su sitio web personal, utilizando tecnologías como Node.js, Express, Pug, HTML, CSS y JavaScript para crear una plataforma moderna y funcional que destaca su trabajo, además de tener el objetivo de participar en los Premios SOVAS.
+
+            .timeline-item
+              h4 Actor de Doblaje
+              p.company JMS Audiovisual (2025 - Presente)
+              p.description Presto mi voz como actor de doblaje para diversos proyectos audiovisuales del estudio de manera remota gracias a mi home studio, ya sea con personajes principales como secundarios y extras de ambiente,durante mi tiempo trabajando aprendo a organizar mi tiempo, trabajar en conjunto con el director y dar mi mejor interpretación con cada personaje.
+
+            .timeline-item
+              h4 Ride Operator
+              p.company Lagoon Amousment Park (2025)
+              p.description En este trabajo tuve la oportunidad de trabajar en el estado de Utah en Estados Unidos por lo que fue un trabajo enteramente en inglés, fui operador de atracciones, encargado de la seguridad y experiencia de los visitantes.
+            
+            .timeline-item
+              h4 Director de Voz
+              p.company Pozole Man y Chilatín (2023)
+              p.description Supervisión de dirección de voces en proyecto animado, ganador del "XVII CONCURSO NACIONAL TRANSPARENCIA EN CORTO 2023", Etapa Estatal en su Primera Edición, proyectada el 26 de septiembre en el Auditorio del Museo Interactivo "La Avispa".
             
             .timeline-item
               h4 Editor de Video
-              p.company Yojo Pool & Chilleando con el donas
-              p.description Edición de contenido para canales de YouTube
-            
-            .timeline-item
-              h4 Cajero y Personal de Carga
-              p.company Bodega San Francisco
-              p.description Atención al cliente y gestión de inventario
+              p.company Yojo Pool & Chilleando con el donas (2020 - 2022)
+              p.description Edición de contenido para canales de YouTube.
       
       include ../partials/contact-form

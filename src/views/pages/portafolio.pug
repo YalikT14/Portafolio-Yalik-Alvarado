@@ -12,17 +12,23 @@ block content
         a.filter-btn(
           href='/portafolio/programacion'
           class=category === 'programacion' ? 'active' : ''
-        ) 💻 Programación
+        ) 
+          i.bi.bi-pc-display
+          |  Programación
         
         a.filter-btn(
           href='/portafolio/diseno'
           class=category === 'diseno' ? 'active' : ''
-        ) 🎨 Diseño
+        ) 
+          i.bi.bi-palette-fill
+          |  Diseño
         
         a.filter-btn(
           href='/portafolio/doblaje'
           class=category === 'doblaje' ? 'active' : ''
-        ) 🎤 Doblaje
+        ) 
+          i.bi.bi-mic-fill
+          |  Doblaje
       
       //- Grid de proyectos (solo se muestra si hay categoría seleccionada)
       if category

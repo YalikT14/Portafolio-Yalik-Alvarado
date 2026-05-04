@@ -2,7 +2,7 @@ exports.getHome = (req, res) => {
   res.render("pages/home", {
     title: "Portafolio - Yalik Tapuy",
     name: "Yalik Tapuy",
-    profession: "Programador, Game Designer y Diseñador Web",
+    profession: "Game Designer, Diseñador Web y Actor de Voz",
     currentYear: new Date().getFullYear(),
   });
 };
@@ -39,7 +39,7 @@ exports.getPortfolioCategory = (req, res) => {
 exports.getAbout = (req, res) => {
   res.render("pages/about", {
     title: "Sobre Mí - Yalik Tapuy",
-    name: "Yalik Amilcar Tapuy Alvarado",
+    name: "Yalik Amilcar Alvarado",
     currentYear: new Date().getFullYear(),
   });
 };

@@ -734,12 +734,27 @@ a {
 .nav-card-icon {
   font-size: 4rem;
   margin-bottom: var(--spacing-sm);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, color 0.4s ease;
   z-index: 1;
+  color: var(--color-accent);
 }
 
 .nav-card:hover .nav-card-icon {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2);
+  color: var(--color-secondary);
+}
+
+/* Animación específica para cada card */
+.nav-card:nth-child(1):hover .nav-card-icon {
+  animation: bounce 0.6s ease;
+}
+
+.nav-card:nth-child(2):hover .nav-card-icon {
+  animation: pulse 0.6s ease;
+}
+
+.nav-card:nth-child(3):hover .nav-card-icon {
+  animation: shake 0.6s ease;
 }
 
 .nav-card h3 {
@@ -764,6 +779,40 @@ a {
 
 .nav-card:nth-child(3):hover {
   border-color: var(--color-dark-purple);
+}
+
+/* Animaciones para los iconos */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1.2) translateY(0);
+  }
+  50% {
+    transform: scale(1.2) translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2) rotate(-5deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(5deg);
+  }
 }
 
 /* ==================== FOOTER ==================== */
