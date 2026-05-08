@@ -10,10 +10,20 @@ block content
       .about-content
         .about-grid
           .about-card
-            img.about-image(
-              src='/images/yalin.png'
-              alt='Yalik Tapuy'
-            )
+            .about-carousel
+              .carousel-inner
+                img.carousel-image.active(
+                  src='/images/yalin.png'
+                  alt='Yalik Tapuy'
+                )
+                img.carousel-image(
+                  src='/images/habilidin.png'
+                  alt='Habilidades'
+                )
+                img.carousel-image(
+                  src='/images/trabajardin.png'
+                  alt='Trabajo'
+                )
           
           .about-text
             h2 ¡Hola!
@@ -28,30 +38,65 @@ block content
               | el teatro y la interpretación vocal.
         
         .skills-section
-          h2.spani.bi.bi-bullseye  Habilidades
+          h2
+            i.bi.bi-bullseye
+            |  Habilidades
           .skills-grid
             .skill-card
               h4 Programación
-              ul
-                li Python - Básico
-                li NonSql Databases - Básico
-                li MongoDB - Intermedio
-                li Processing - Intermedio
-                li JavaScript - Intermedio
-                li C++ - Intermedio
-                li Arduino - Intermedio
-                li C# & Unity - Avanzado
-                li HTML & CSS - Avanzado
+              .skills-icons-grid
+                .skill-icon-item
+                  img(src='/images/Icons/Python.svg' alt='Python')
+                  span Python
+                .skill-icon-item
+                  img(src='/images/Icons/Database.svg' alt='Databases')
+                  span Bases de Datos
+                .skill-icon-item
+                  img(src='/images/Icons/Processing.svg' alt='Processing')
+                  span Processing
+                .skill-icon-item
+                  img(src='/images/Icons/JS.svg' alt='JavaScript')
+                  span JavaScript
+                .skill-icon-item
+                  img(src='/images/Icons/C++.svg' alt='C++')
+                  span C++
+                .skill-icon-item
+                  img(src='/images/Icons/Arduino.svg' alt='Arduino')
+                  span Arduino
+                .skill-icon-item
+                  img(src='/images/Icons/CSharp.svg' alt='C#')
+                  span C#
+                .skill-icon-item
+                  img(src='/images/Icons/Unity.svg' alt='C#')
+                  span Unity
+                .skill-icon-item
+                  img(src='/images/Icons/HTML.svg' alt='HTML & CSS')
+                  span HTML
+                .skill-icon-item
+                  img(src='/images/Icons/CSS.svg' alt='HTML & CSS')
+                  span CSS
             
             .skill-card
               h4 Diseño
-              ul
-                li Ilustración Digital - Intermedio
-                li Edición en Photoshop - Intermedio
-                li Adobe Illustrator - Intermedio
-                li Adobe After Effects - Intermedio
-                li Edición de video (VEGAS) - Intermedio
-                li Edición de video (Premiere) - Avanzado
+              .skills-icons-grid
+                .skill-icon-item
+                  img(src='/images/Icons/Graphic.svg' alt='Ilustración')
+                  span Ilustración Digital
+                .skill-icon-item
+                  img(src='/images/Icons/PS.svg' alt='Photoshop')
+                  span Photoshop
+                .skill-icon-item
+                  img(src='/images/Icons/Ilustrator.svg' alt='Illustrator')
+                  span Illustrator
+                .skill-icon-item
+                  img(src='/images/Icons/After.svg' alt='After Effects')
+                  span After Effects
+                .skill-icon-item
+                  img(src='/images/Icons/Vegas.svg' alt='Vegas')
+                  span VEGAS
+                .skill-icon-item
+                  img(src='/images/Icons/Premiere.svg' alt='Premiere')
+                  span Premiere
             
             .skill-card
               h4 Otros
@@ -59,11 +104,13 @@ block content
                 li Game Design
                 li Actuación de Voz y Doblaje
                 li Actuación Teatral
-                li Ingles - Intermedio a Avanzado
+                li Inglés - Intermedio a Avanzado
                 li Español - Nativo
         
         .experience-section
-          h2.span.i.bi.bi-briefcase-fill  Experiencia Laboral
+          h2
+            i.bi.bi-briefcase-fill
+            |  Experiencia Laboral
           .timeline
             .timeline-item
               h4 Desarrollador Web

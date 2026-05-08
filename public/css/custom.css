@@ -623,6 +623,7 @@ a {
   margin-bottom: var(--spacing-sm);
   text-transform: uppercase;
   letter-spacing: 3px;
+  text-align: center;
 }
 
 .hero-title {
@@ -644,6 +645,8 @@ a {
   max-width: 300px;
   width: 100%;
   margin: var(--spacing-md) auto;
+  margin-top: -25px;
+  margin-bottom: -75px;
   animation: float 3s ease-in-out infinite;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
@@ -1217,3 +1220,109 @@ body.overflow-hidden {
   }
 }
 
+/* ==================== SKILLS ICONS GRID ==================== */
+.skills-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.skill-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.skill-icon-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.skill-icon-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.skill-icon-item:hover img {
+  transform: scale(1.1);
+}
+
+.skill-icon-item span {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-text);
+}
+
+/* Responsive para íconos */
+@media (max-width: 768px) {
+  .skills-icons-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .skill-icon-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-icons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-icon-item {
+    padding: var(--spacing-xs);
+  }
+
+  .skill-icon-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-icon-item span {
+    font-size: 0.75rem;
+  }
+}
+
+/* ==================== ABOUT CAROUSEL ==================== */
+.about-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+  position: relative;
+}
