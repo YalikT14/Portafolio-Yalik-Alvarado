@@ -14,6 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 
 // Archivos estáticos
 app.use(express.static(path.join(__dirname, "../public")));
+app.use(
+  "/vendor/player.style",
+  express.static(path.join(__dirname, "../node_modules/player.style")),
+);
+app.use(
+  "/vendor/media-chrome",
+  express.static(path.join(__dirname, "../node_modules/media-chrome")),
+);
 
 // Rutas
 app.use("/", indexRouter);

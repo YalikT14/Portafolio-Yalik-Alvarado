@@ -15,6 +15,7 @@
         .video-container-custom
           iframe(
             src="https://www.youtube.com/embed/aVVyK3iA-JE?si=EPoUaNsA0mA20zH3"
+            title='Demo de Doblaje Profesional'
             frameborder='0'
             allowfullscreen
             loading='lazy'
@@ -48,8 +49,8 @@
         | Trabajo de actuación de voz para la instalación inmersiva "Dreamlights", un proyecto artístico del animador Charlie Salazar. Este proyecto fue presentado en la Universidad San Francisco de Quito, como parte del Animation Showcase de la Carrera de Animación Digital.
       
       .video-wrapper
-        .custom-video-player
-          video(controls)
+        .custom-video-player(data-video-src='/images/Dreamlights.mp4')
+          video(controls playsinline preload='metadata')
             source(src='/images/Dreamlights.mp4' type='video/mp4')
             | Tu navegador no soporta el elemento de video.
       
@@ -71,8 +72,8 @@
         | Director de doblaje en proyecto animado para un concurso en Guerrero,México.
       
       .video-wrapper
-        .custom-video-player
-          video(controls)
+        .custom-video-player(data-video-src='/images/Pozole Man y Chilatin.mp4')
+          video(controls playsinline preload='metadata')
             source(src='/images/Pozole Man y Chilatin.mp4' type='video/mp4')
             | Tu navegador no soporta el elemento de video.
       

@@ -44,8 +44,8 @@
       
       p.project-tech.project-detail Video Gameplay
       .video-wrapper.project-detail
-        .custom-video-player
-          video(controls)
+        .custom-video-player(data-video-src='/images/Sinchi Saynata/SinchiCore.mp4')
+          video(controls playsinline preload='metadata')
             source(src='/images/Sinchi Saynata/SinchiCore.mp4' type='video/mp4')
             | Tu navegador no soporta el elemento de video.
 
@@ -101,8 +101,8 @@
       
       p.project-tech.project-detail Video Gameplay
       .video-wrapper.project-detail
-        .custom-video-player
-          video(controls)
+        .custom-video-player(data-video-src='/images/Juegojugar.mp4')
+          video(controls playsinline preload='metadata')
             source(src='/images/Juegojugar.mp4' type='video/mp4')
             | Tu navegador no soporta el elemento de video.
 

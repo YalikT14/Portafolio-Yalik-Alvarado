@@ -27,6 +27,16 @@ html(lang='es')
     //- Custom CSS
     link(rel='stylesheet' href='/css/custom.css')
     link(rel='stylesheet', href='/css/character-animation.css')
+
+    script(type='importmap').
+      {
+        "imports": {
+          "player.style/instaplay": "/vendor/player.style/themes/instaplay/dist/media-theme.js",
+          "player.style/microvideo": "/vendor/player.style/themes/microvideo/dist/media-theme.js",
+          "media-chrome": "/vendor/media-chrome/dist/index.js",
+          "media-chrome/": "/vendor/media-chrome/"
+        }
+      }
     
   body
     main
@@ -43,3 +53,4 @@ html(lang='es')
     script(src='/js/menu.js')
     script(src='/js/carousel.js')
     script(src='/js/character-animation.js')
+    script(type='module' src='/js/video-players.js')

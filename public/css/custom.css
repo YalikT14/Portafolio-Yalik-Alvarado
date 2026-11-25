@@ -438,7 +438,7 @@ a {
   width: 100%;
   max-width: 700px;
   position: relative;
-  padding-bottom: 39.375%; /* 16:9 ratio at 700px = 393.75px height */
+  padding-bottom: 39.375%;
   height: 0;
   overflow: hidden;
   border-radius: var(--radius-md);
@@ -470,6 +470,12 @@ a {
   height: auto;
   display: block;
   max-height: 400px;
+}
+
+.custom-video-player > media-theme-instaplay,
+.custom-video-player > media-theme-microvideo {
+  display: block;
+  width: 100%;
 }
 
 /* Controles personalizados del video */
@@ -551,7 +557,7 @@ a {
 
   .video-container-custom {
     max-width: 100%;
-    padding-bottom: 56.25%; /* 16:9 en móvil */
+    padding-bottom: 56.25%;
   }
 
   .custom-video-player {
