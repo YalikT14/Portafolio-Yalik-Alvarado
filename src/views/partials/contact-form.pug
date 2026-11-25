@@ -3,50 +3,14 @@ section#contacto.contact-section
     h2.text-gradient ¿Hablamos?
     p.lead ¿Tienes un proyecto en mente? ¡Contáctame!
     
-    form.contact-form(action='/contact' method='POST')
-      .form-row
-        .form-group
-          label(for='nombre') Nombre
-          input#nombre.form-input(
-            type='text'
-            name='nombre'
-            placeholder='Tu nombre'
-            required
-          )
-        
-        .form-group
-          label(for='correo') Email
-          input#correo.form-input(
-            type='email'
-            name='correo'
-            placeholder='tu@email.com'
-            required
-          )
-      
-      .form-group
-        label(for='motivo') Motivo
-        select#motivo.form-input(name='motivo')
-          option(value='consulta') Consulta
-          option(value='proyecto') Proyecto
-          option(value='oportunidad') Oportunidad de Trabajo
-      
-      .form-group
-        label(for='mensaje') Mensaje
-        textarea#mensaje.form-input(
-          name='mensaje'
-          rows='6'
-          placeholder='Cuéntame sobre tu proyecto...'
-          required
-        )
-      
-      button.submit-btn(type='submit') Enviar Mensaje
+    a.contact-email-link(href='mailto:tu-correo@ejemplo.com') tu-correo@ejemplo.com
     
     .social-links
       h3 Encuéntrame en
       .social-icons
-        a(href='https://www.instagram.com/yaliksitodab/' target='_blank')
+        a(href='https://www.instagram.com/yaliksitodab/' target='_blank' rel='noopener noreferrer' aria-label='Instagram')
           img(src='/images/instagram.png' alt='Instagram')
-        a(href='https://www.youtube.com/@YalikT14' target='_blank')
+        a(href='https://www.youtube.com/@YalikT14' target='_blank' rel='noopener noreferrer' aria-label='YouTube')
           img(src='/images/youtube.png' alt='YouTube')
-        a(href='https://steamcommunity.com/id/eseecuagodiano/' target='_blank')
+        a(href='https://steamcommunity.com/id/eseecuagodiano/' target='_blank' rel='noopener noreferrer' aria-label='Steam')
           img(src='/images/logotipo-de-steam.png' alt='Steam')

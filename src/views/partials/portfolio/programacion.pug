@@ -7,7 +7,7 @@
       p.project-tech C# • Unity • Game Design • Animación
     
     .project-body
-      p.project-description
+      p.project-description.project-detail
         | En este juego, encarnas a la máscara Aya Huma para proteger la región andina del Chocó de la minería ilegal y la explotación indiscriminada de recursos.
         br
         | Por suerte, tus amigos Cóndor, Jaguar y Serpiente están dispuestos a prestarte sus poderes únicos. ¡Únete a ellos y salva tu hogar!
@@ -42,20 +42,20 @@
         .swiper-button-prev
         .swiper-pagination
       
-      p.project-tech Video Gameplay
-      .video-wrapper
+      p.project-tech.project-detail Video Gameplay
+      .video-wrapper.project-detail
         .custom-video-player
           video(controls)
             source(src='/images/Sinchi Saynata/SinchiCore.mp4' type='video/mp4')
             | Tu navegador no soporta el elemento de video.
 
-      .project-credits
+      .project-credits.project-detail
         h4 Link de la página del juego en Itch.io:
         ul 
           li 
             a(href='https://tar-baby.itch.io/sinchi-saynata' target='_blank') https://tar-baby.itch.io/sinchi-saynata
       
-      .project-credits
+      .project-credits.project-detail
         h4 Créditos
         ul
           li Violeta Mediavilla @aguanteelpoxi01 - Programación y Diseño de Niveles
@@ -64,13 +64,15 @@
           li Camilo Cevallos @skellymuffin - Ilustración y Animación 
           li Kerly Vallejo @kerlyacinemod - Música
 
+      button.project-more-btn(type='button' aria-haspopup='dialog' aria-controls='project-details-modal' aria-expanded='false') Ver más
+
   .project-card
     .project-header
       h3 Haunted House
       p.project-tech C# • Unity • Game Design
     
     .project-body
-      p.project-description
+      p.project-description.project-detail
         | Videojuego 3D que mezcla mecánicas de shooter, plataformas y 
         | sobrevivencia. Desarrollado completamente por mí.
       
@@ -97,9 +99,11 @@
         .swiper-button-prev
         .swiper-pagination
       
-      p.project-tech Video Gameplay
-      .video-wrapper
+      p.project-tech.project-detail Video Gameplay
+      .video-wrapper.project-detail
         .custom-video-player
           video(controls)
             source(src='/images/Juegojugar.mp4' type='video/mp4')
             | Tu navegador no soporta el elemento de video.
+
+      button.project-more-btn(type='button' aria-haspopup='dialog' aria-controls='project-details-modal' aria-expanded='false') Ver más

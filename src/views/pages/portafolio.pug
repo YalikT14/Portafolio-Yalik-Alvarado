@@ -1,7 +1,7 @@
 extends ../layouts/main
 
 block content
-  section.portfolio-page
+  section.portfolio-page(class=category ? 'portfolio-page--category' : 'portfolio-page--overview')
     .container
       .portfolio-header
         h1.text-gradient Mi Portafolio
@@ -41,3 +41,8 @@ block content
           
           if category === 'doblaje'
             include ../partials/portfolio/doblaje
+
+    dialog#project-details-modal.project-modal(aria-labelledby='project-modal-title')
+      button.project-modal-close(type='button' aria-label='Cerrar detalles') ×
+      h2#project-modal-title
+      .project-modal-content

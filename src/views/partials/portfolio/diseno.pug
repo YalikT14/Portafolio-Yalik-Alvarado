@@ -8,7 +8,7 @@
       p.project-tech React • Node.js • Express • MongoDB
     
     .project-body
-      p.project-description
+      p.project-description.project-detail
         | Es una plataforma digital y aplicación web diseñada específicamente para actores de voz, tanto profesionales como aficionados, creada por Sebastian Carrasco y Yalik Alvarado. Permite a los usuarios subir demostraciones, crear portafolios, organizar su trabajo y conectar con oportunidades laborales en un solo lugar.
       
       .swiper.project-carousel
@@ -45,11 +45,13 @@
         .swiper-button-prev
         .swiper-pagination
 
-      .project-credits
+      .project-credits.project-detail
         h4 Link de la Presentación en Behance:
         ul 
           li 
             a(href='https://www.behance.net/gallery/232410429/Dubbidan-Web-Application-for-Voice-Actors' target='_blank') https://www.behance.net/gallery/232410429/Dubbidan-Web-Application-for-Voice-Actors
+
+      button.project-more-btn(type='button' aria-haspopup='dialog' aria-controls='project-details-modal' aria-expanded='false') Ver más
   
   //- Montaje Birdman
   .project-card
@@ -58,7 +60,7 @@
       p.project-tech Photoshop • Illustrator • Composición
     
     .project-body
-      p.project-description
+      p.project-description.project-detail
         | Serie de montajes fotográficos trabajando vectores, máscaras de 
         | fusión, tipografía y composición avanzada.
       
@@ -83,6 +85,8 @@
         .swiper-button-next
         .swiper-button-prev
         .swiper-pagination
+
+      button.project-more-btn(type='button' aria-haspopup='dialog' aria-controls='project-details-modal' aria-expanded='false') Ver más
   
   //- Ilustraciones
   .project-card
@@ -91,6 +95,9 @@
       p.project-tech Adobe Illustrator • Photoshop • Digital Art
     
     .project-body
+      p.project-description.project-detail
+        | Selección de ilustraciones y trabajos gráficos.
+
       .swiper.project-carousel
         .swiper-wrapper
           .swiper-slide
@@ -109,3 +116,5 @@
         .swiper-button-next
         .swiper-button-prev
         .swiper-pagination
+
+      button.project-more-btn(type='button' aria-haspopup='dialog' aria-controls='project-details-modal' aria-expanded='false') Ver más

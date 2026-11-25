@@ -9,7 +9,7 @@ block content
       
       .about-content
         .about-grid
-          .about-card
+          .about-profile-card
             .about-carousel
               .carousel-inner
                 img.carousel-image.active(
@@ -25,17 +25,17 @@ block content
                   alt='Trabajo'
                 )
           
-          .about-text
-            h2 ¡Hola!
-            p
-              | Soy #{name}, actualmente estudiante de Diseño en Medios 
-              | Interactivos en la Universidad San Francisco de Quito. 
-              | Soy oriundo de la Amazonía Ecuatoriana.
-            br
-            p
-              | De entre mis hobbies disfruto mucho las salidas al aire libre, 
-              | como montañismo, senderismo o ciclismo. También me encanta 
-              | el teatro y la interpretación vocal.
+            .about-text
+              h2 ¡Hola!
+              p
+                | Soy #{name}, actualmente estudiante de Diseño en Medios
+                | Interactivos en la Universidad San Francisco de Quito.
+                | Soy oriundo de la Amazonía Ecuatoriana.
+              br
+              p
+                | De entre mis hobbies disfruto mucho las salidas al aire libre,
+                | como montañismo, senderismo o ciclismo. También me encanta
+                | el teatro y la interpretación vocal.
         
         .skills-section
           h2
@@ -44,59 +44,77 @@ block content
           .skills-grid
             .skill-card
               h4 Programación
-              .skills-icons-grid
-                .skill-icon-item
-                  img(src='/images/Icons/Python.svg' alt='Python')
-                  span Python
-                .skill-icon-item
-                  img(src='/images/Icons/Database.svg' alt='Databases')
-                  span Bases de Datos
-                .skill-icon-item
-                  img(src='/images/Icons/Processing.svg' alt='Processing')
-                  span Processing
-                .skill-icon-item
-                  img(src='/images/Icons/JS.svg' alt='JavaScript')
-                  span JavaScript
-                .skill-icon-item
-                  img(src='/images/Icons/C++.svg' alt='C++')
-                  span C++
-                .skill-icon-item
-                  img(src='/images/Icons/Arduino.svg' alt='Arduino')
-                  span Arduino
-                .skill-icon-item
-                  img(src='/images/Icons/CSharp.svg' alt='C#')
-                  span C#
-                .skill-icon-item
-                  img(src='/images/Icons/Unity.svg' alt='C#')
-                  span Unity
-                .skill-icon-item
-                  img(src='/images/Icons/HTML.svg' alt='HTML & CSS')
-                  span HTML
-                .skill-icon-item
-                  img(src='/images/Icons/CSS.svg' alt='HTML & CSS')
-                  span CSS
+              .swiper.skills-carousel
+                .swiper-wrapper
+                  .swiper-slide
+                    .skills-icons-grid
+                      .skill-icon-item
+                        img(src='/images/Icons/Python.svg' alt='Python')
+                        span Python
+                      .skill-icon-item
+                        img(src='/images/Icons/Database.svg' alt='Databases')
+                        span Bases de Datos
+                      .skill-icon-item
+                        img(src='/images/Icons/Processing.svg' alt='Processing')
+                        span Processing
+                      .skill-icon-item
+                        img(src='/images/Icons/JS.svg' alt='JavaScript')
+                        span JavaScript
+                  .swiper-slide
+                    .skills-icons-grid
+                      .skill-icon-item
+                        img(src='/images/Icons/C++.svg' alt='C++')
+                        span C++
+                      .skill-icon-item
+                        img(src='/images/Icons/Arduino.svg' alt='Arduino')
+                        span Arduino
+                      .skill-icon-item
+                        img(src='/images/Icons/CSharp.svg' alt='C#')
+                        span C#
+                      .skill-icon-item
+                        img(src='/images/Icons/Unity.svg' alt='Unity')
+                        span Unity
+                  .swiper-slide
+                    .skills-icons-grid
+                      .skill-icon-item
+                        img(src='/images/Icons/HTML.svg' alt='HTML')
+                        span HTML
+                      .skill-icon-item
+                        img(src='/images/Icons/CSS.svg' alt='CSS')
+                        span CSS
+                .swiper-button-prev.skills-swiper-prev
+                .swiper-button-next.skills-swiper-next
+                .swiper-pagination.skills-swiper-pagination
             
             .skill-card
               h4 Diseño
-              .skills-icons-grid
-                .skill-icon-item
-                  img(src='/images/Icons/Graphic.svg' alt='Ilustración')
-                  span Ilustración Digital
-                .skill-icon-item
-                  img(src='/images/Icons/PS.svg' alt='Photoshop')
-                  span Photoshop
-                .skill-icon-item
-                  img(src='/images/Icons/Ilustrator.svg' alt='Illustrator')
-                  span Illustrator
-                .skill-icon-item
-                  img(src='/images/Icons/After.svg' alt='After Effects')
-                  span After Effects
-                .skill-icon-item
-                  img(src='/images/Icons/Vegas.svg' alt='Vegas')
-                  span VEGAS
-                .skill-icon-item
-                  img(src='/images/Icons/Premiere.svg' alt='Premiere')
-                  span Premiere
+              .swiper.skills-carousel
+                .swiper-wrapper
+                  .swiper-slide
+                    .skills-icons-grid
+                      .skill-icon-item
+                        img(src='/images/Icons/Graphic.svg' alt='Ilustración')
+                        span Ilustración Digital
+                      .skill-icon-item
+                        img(src='/images/Icons/PS.svg' alt='Photoshop')
+                        span Photoshop
+                      .skill-icon-item
+                        img(src='/images/Icons/Ilustrator.svg' alt='Illustrator')
+                        span Illustrator
+                      .skill-icon-item
+                        img(src='/images/Icons/After.svg' alt='After Effects')
+                        span After Effects
+                  .swiper-slide
+                    .skills-icons-grid
+                      .skill-icon-item
+                        img(src='/images/Icons/Vegas.svg' alt='Vegas')
+                        span VEGAS
+                      .skill-icon-item
+                        img(src='/images/Icons/Premiere.svg' alt='Premiere')
+                        span Premiere
+                .swiper-button-prev.skills-swiper-prev
+                .swiper-button-next.skills-swiper-next
+                .swiper-pagination.skills-swiper-pagination
             
             .skill-card
               h4 Otros

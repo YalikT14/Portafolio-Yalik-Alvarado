@@ -3,140 +3,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("overlay");
   const body = document.body;
 
-  // Solo ejecutar si existen los elementos (móvil)
   if (toggle && overlay) {
-    // Toggle del menú hamburguesa
+    const setMenuOpen = (isOpen) => {
+      toggle.classList.toggle("active", isOpen);
+      overlay.classList.toggle("open", isOpen);
+      body.classList.toggle("overflow-hidden", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      overlay.setAttribute("aria-hidden", String(!isOpen));
+    };
+
     toggle.addEventListener("click", () => {
-      toggle.classList.toggle("active");
-      overlay.classList.toggle("open");
-      body.classList.toggle("overflow-hidden");
+      setMenuOpen(!overlay.classList.contains("open"));
     });
 
-    // Cerrar menú al hacer clic en un enlace
-    const menuLinks = document.querySelectorAll(".overlay-menu a");
-    menuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        toggle.classList.remove("active");
-        overlay.classList.remove("open");
-        body.classList.remove("overflow-hidden");
-      });
+    overlay.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setMenuOpen(false));
     });
 
-    // Cerrar con tecla ESC
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && overlay.classList.contains("open")) {
-        toggle.classList.remove("active");
-        overlay.classList.remove("open");
-        body.classList.remove("overflow-hidden");
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && overlay.classList.contains("open")) {
+        setMenuOpen(false);
+        toggle.focus();
       }
     });
   }
 
-  // Añadir clase active a links del menú según la página actual
   const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  navLinks.forEach((link) => {
+  document.querySelectorAll(".nav-link").forEach((link) => {
     if (link.getAttribute("href") === currentPath) {
       link.style.color = "var(--color-accent)";
     }
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const filterButtons = document.querySelectorAll(".filter-btn");
-
-  filterButtons.forEach((btn, index) => {
-    btn.style.opacity = "0";
-    btn.style.transform = "translateY(20px)";
+  document.querySelectorAll(".filter-btn").forEach((button, index) => {
+    button.style.opacity = "0";
+    button.style.transform = "translateY(20px)";
 
     setTimeout(() => {
-      btn.style.transition = "all 0.5s ease";
-      btn.style.opacity = "1";
-      btn.style.transform = "translateY(0)";
+      button.style.transition = "all 0.5s ease";
+      button.style.opacity = "1";
+      button.style.transform = "translateY(0)";
     }, 200 + index * 100);
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("toggle");
-  const overlay = document.getElementById("overlay");
-  const body = document.body;
-
-  // Solo ejecutar si existen los elementos (móvil)
-  if (toggle && overlay) {
-    // Toggle del menú hamburguesa
-    toggle.addEventListener("click", () => {
-      toggle.classList.toggle("active");
-      overlay.classList.toggle("open");
-      body.classList.toggle("overflow-hidden");
-    });
-
-    // Cerrar menú al hacer clic en un enlace
-    const menuLinks = document.querySelectorAll(".overlay-menu a");
-    menuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        toggle.classList.remove("active");
-        overlay.classList.remove("open");
-        body.classList.remove("overflow-hidden");
-      });
-    });
-
-    // Cerrar con tecla ESC
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && overlay.classList.contains("open")) {
-        toggle.classList.remove("active");
-        overlay.classList.remove("open");
-        body.classList.remove("overflow-hidden");
-      }
-    });
-  }
-
-  // Añadir clase active a links del menú según la página actual
-  const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  navLinks.forEach((link) => {
-    if (link.getAttribute("href") === currentPath) {
-      link.style.color = "var(--color-accent)";
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const filterButtons = document.querySelectorAll(".filter-btn");
-
-  filterButtons.forEach((btn, index) => {
-    btn.style.opacity = "0";
-    btn.style.transform = "translateY(20px)";
-
-    setTimeout(() => {
-      btn.style.transition = "all 0.5s ease";
-      btn.style.opacity = "1";
-      btn.style.transform = "translateY(0)";
-    }, 200 + index * 100);
-  });
-});
-
-// ==================== CARRUSEL AUTOMÁTICO ABOUT ==================== 
-document.addEventListener("DOMContentLoaded", () => {
   const carouselImages = document.querySelectorAll(".carousel-image");
 
-  if (carouselImages.length > 0) {
+  if (carouselImages.length > 1) {
     let currentIndex = 0;
 
-    function showNextImage() {
-      // Remover clase active de la imagen actual
+    setInterval(() => {
       carouselImages[currentIndex].classList.remove("active");
-
-      // Calcular índice de la siguiente imagen
       currentIndex = (currentIndex + 1) % carouselImages.length;
-
-      // Agregar clase active a la siguiente imagen
       carouselImages[currentIndex].classList.add("active");
-    }
-
-    // Cambiar imagen cada 4 segundos
-    setInterval(showNextImage, 4000);
+    }, 4000);
   }
 });

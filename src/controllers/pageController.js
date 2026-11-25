@@ -43,17 +43,3 @@ exports.getAbout = (req, res) => {
     currentYear: new Date().getFullYear(),
   });
 };
-
-exports.postContact = (req, res) => {
-  const { nombre, correo, telf, motivo, mensaje } = req.body;
-
-  console.log("Formulario recibido:", {
-    nombre,
-    correo,
-    telf,
-    motivo,
-    mensaje,
-  });
-
-  res.redirect("/sobre-mi#contacto");
-};

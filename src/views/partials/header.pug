@@ -15,16 +15,21 @@ header.header
           span globox204@outlook.es
     
     //- Toggle móvil
-    #toggle.button_container
+    button#toggle.button_container(
+      type='button'
+      aria-label='Abrir menú'
+      aria-expanded='false'
+      aria-controls='overlay'
+    )
       span.top
       span.middle
       span.bottom
     
-    //- Overlay menú móvil
-    #overlay.overlay
-      nav.overlay-menu
-        ul
-          li: a(href='/') Inicio
-          li: a(href='/portafolio') Portafolio
-          li: a(href='/sobre-mi') Sobre Mí
-          li: a(href='mailto:globox204@outlook.es') Contacto
+//- Overlay menú móvil
+#overlay.overlay(aria-hidden='true')
+  nav.overlay-menu
+    ul
+      li: a(href='/') Inicio
+      li: a(href='/portafolio') Portafolio
+      li: a(href='/sobre-mi') Sobre Mí
+      li: a(href='mailto:globox204@outlook.es') Contacto
